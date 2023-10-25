@@ -1,5 +1,5 @@
 calculator: calculator.c lib/libcalc.a
-	gcc -o calculator calculator.c -I./lib -L./lib -lcalc
+	gcc -pg -o calculator calculator.c -I./lib -L./lib -lcalc
 
 lib/libcalc.a: lib/add.o lib/sub.o lib/mul.o lib/div.o
 	ar rcs lib/libcalc.a lib/add.o lib/sub.o lib/mul.o lib/div.o
